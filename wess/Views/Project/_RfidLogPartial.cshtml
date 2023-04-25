@@ -1,0 +1,24 @@
+﻿@model List<Rfid>
+
+<table>
+    <thead>
+        <tr>
+            <th colspan="3" style="background:green">All Records</th>
+        </tr>
+        <tr>
+            <th>ID</th>
+            <th>CARD ID</th>
+            <th>DATE AND TIME</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var log in Model)
+        {
+            <tr>
+                <td>@log.Id</td>
+                <td>@log.CardId</td>
+                <td>@log.LogDate.ToString("F j, Y, g:i a")</td>
+            </tr>
+        }
+    </tbody>
+</table>
